@@ -11,7 +11,7 @@
 ````
 git remote add origin https://github.com/huriellopes/blog-api.git
 ````
-Para baixar o zip: [https://github.com/blog-api/archive/master.zip](https://github.com/blog-api/archive/master.zip)
+Para baixar o zip: [https://github.com/huriellopes/blog-api/archive/master.zip](https://github.com/huriellopes/blog-api/archive/master.zip)
 
 ## ⚡ Executando o projeto
 
