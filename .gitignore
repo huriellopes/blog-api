@@ -1,0 +1,24 @@
+# App
+.env
+build/*
+coverage/*
+
+# IDEs
+.idea/*
+
+## VisualStudioCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Operational System
+.DS_Store
+._*
+
+# Package manager
+yarn-error.log
+yarn.lock
+node_modules/*
