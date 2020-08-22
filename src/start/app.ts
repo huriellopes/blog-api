@@ -27,7 +27,11 @@ app.use((err: Errback, req: Request, res: Response, next: NextFunction) => {
     });
   }
 
-  return res.status(500).json({ message: 'Internal Error' });
+  if (process.env.APP_DEBUG === 'true') {
+    return res.status(500).json({ message: err.message });
+  } else {
+    return res.status(500).json({ message: 'Internal Error' });
+  }
 });
 
 export default app;

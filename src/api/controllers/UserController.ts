@@ -13,6 +13,12 @@ class UserController {
 
     return res.status(201).json(classToClass(user));
   }
+
+  // async update(req: Request, res: Response) {
+  //   const { name, email, password, roles } = req.body;
+
+  //   const userService = new UserService();
+  // }
 }
 
 export default UserController;

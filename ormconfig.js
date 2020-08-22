@@ -10,10 +10,10 @@ module.exports = {
   database: process.env.DB_NAME,
   synchronize: true,
   logging: false,
-  entities: ['./src/api/models/**/*.ts'],
-  migrations: ['./src/database/migrations/**/*.ts'],
+  entities: [__dirname + '/src/api/models/**/*.ts'],
+  migrations: [__dirname + '/src/database/migrations/**/*.ts'],
   cli: {
-    migrationsDir: './src/database/migrations',
-    entitiesDir: './src/api/models',
+    migrationsDir: __dirname + '/src/database/migrations',
+    entitiesDir: __dirname + '/src/api/models',
   },
 };

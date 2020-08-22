@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  server:
+    container_name: server
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    command: yarn dev:server
+    networks:
+      - private_network
+  database:
+    container_name: database
+    image: postgres
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: 299610
+      POSTGRES_DB: "blog"
+    restart: always
+    ports:
+      - "5432:5432"
+    networks:
+      - private_network
+
+networks:
+  private_network:

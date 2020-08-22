@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import PostCotnroller from '../api/controllers/PostCotnroller';
+import PostController from '../api/controllers/PostController';
 import ensureAuthenticated from '../api/middlewares/ensureAuthenticated';
 import { is } from '../api/middlewares/permission';
 
 const postsRouter = Router();
-const postController = new PostCotnroller();
+const postController = new PostController();
 
 postsRouter.use(ensureAuthenticated);
 postsRouter.post('/', is(['Role_Admin']), postController.create);

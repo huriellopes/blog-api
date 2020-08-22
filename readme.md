@@ -2,6 +2,40 @@
 
 > Api desenvolvida para blog, com controler de acesso de usuários, cadastro de usuários, posts, categorias!
 
+## ⚠ Requisitos:
+
+- Node.Js >= 12.13.1
+- NPM >= 6.13.4
+- Yarn >= 1.22
+- Docker >= 19.03
+- Docker Compose >= 1.25
+
+## ⚒ O que foi utilizado:
+
+- Node.Js
+- Express
+- Typescript
+- Ts node dev
+- DotEnv
+- Cors
+- Eslint
+- Prettier
+- JsonWebToken (JWT)
+- Pg
+- Typeorm
+- Bcryptjs
+- Celebrate
+- Class Transformer
+
+## 🚩 Funcionalidades:
+
+- Controle de acesso
+- Authenticação via JWT
+- Middleware por regra de acesso
+- Criação de Posts - TODO
+- Aprovação de Posts - TODO
+- Aprovação de Comentários - TODO
+
 ## 🙌 Mãos a obra
 
 > Você pode realizar o clone deste repositório ou baixar o arquivo .zip
@@ -33,23 +67,22 @@ copy .env.example .env ou cp .env.example .env
 
 Caso for utilizar docker, rode os sequintes comandos:
 
-````
-# Container do PostgreSQL, altere **POSTGRES_PASSWORD=senha** para a senha desejada
-docker run --name blog -e POSTGRES_PASSWORD=senha -p 5432:5432 -d postgres
-````
+> Antes modifique o docker-compose, colocando a senha escolhida e o nome do banco de dados escolhida em **environment**, em seguida rode o seguinte comando:
 
-> Depois dos containers criados e startados, abra o postgreSQL em um SGBD e crie um banco chamado **blog** ou escolha o nome que quiser.
-
-Em seguida rode o seguinte comando para as migrations:
+Obs.: Caso queira mudar as portas, mude apenas a primeira opção: 3000:3000 para 3333:3000 ou 5432:5432 para 5430:5432
 
 ````
-yarn typeorm migration:run ou npm typeorm migration:run
-````
+# Irá montar e startar dois containers
+docker-compose up -d
 
-Caso precise desfazer as migrações, execute o seguinte comando:
+# Em seguida acesse o container server
+docker exec -it server sh
 
-````
-yarn typeorm migration:revert ou npm typeorm migration:revert
+# Dentro do container, execute o seguinte comando:
+yarn typeorm migration:run
+
+# Caso queira desfazer as migrações, o execute o seguinte comando:
+yarn typeorm migration:revert
 ````
 
 ## 🚀 Rodando o servidor
@@ -60,7 +93,7 @@ yarn typeorm migration:revert ou npm typeorm migration:revert
 yarn dev:server
 ````
 
-> Para ter certeza que o projeto está rodando, abra o navegador e execute o seguinte link: http://localhost:3333/test (após o `:` com a porta que configurou no .env)
+> Para ter certeza que o projeto está rodando, abra o navegador e execute o seguinte link: http://localhost:3000/test (após o `:` com a porta que configurou no .env)
 
 ## 📑 Licença
 
