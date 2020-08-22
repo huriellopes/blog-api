@@ -87,6 +87,8 @@ yarn typeorm migration:revert
 
 ## 🚀 Rodando o servidor
 
+> Obs.: Esse passo, so rode caso for utilizar local, sem docker!
+
 ### Para rodar o servidor, execute o comando:
 
 ````
