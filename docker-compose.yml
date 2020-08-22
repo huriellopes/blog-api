@@ -16,8 +16,8 @@ services:
     image: postgres
     environment:
       POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: 299610
-      POSTGRES_DB: "blog"
+      POSTGRES_PASSWORD: "sua_senha"
+      POSTGRES_DB: "seu_banco"
     restart: always
     ports:
       - "5432:5432"
